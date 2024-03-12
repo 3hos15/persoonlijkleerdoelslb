@@ -3,63 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>persoonlijkleerdoel</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Persoonlijk leerdoel</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body class="site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-    <nav class="navi">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="persoonlijk.html">Persoonlijkleerdoel + reflectie</a></li>
-        </ul>
-    </nav>
-
-    <header class="head">
-        <h1 class="title">Ik heb geen idee</h1>
+    <header class="masthead">
+        <!-- <nav class="logo">
+            <a href="persoonlijk.html">
+              <img src="images/grenadiershek.JPG" alt="Link naar reflectie etc.">
+            </a>
+          </nav> -->
+          
+        <nav class="logo"><a href="persoonlijk.html">Link naar reflectie etc.</a></nav>
+        <!-- <div class="logo">G</div> -->
+        <h2 class="site-title">is for Grid</h2>
+        <img src="images/londoneye.jpg" alt="The sun sets behind the wing of an airliner.">
     </header>
 
-    <main class="content">
-        <figure class="card">
-            <img src="images/londoneye.jpg" alt="Foto van de London Eye door gebouwen heen">
-            <figcaption class="caption">
-                <h3 class="caption-title">Foto van de London Eye door gebouwen heen</h3>
-            </figcaption>
-        </figure>
-
-        <section class="text">
-            <h2>something..L</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <main id="content" class="main-area">
+        <section class="splash">
+            <div class="splash-content">
+                <h2 class="content-title">Full Bleed CSS Grid</h2>
+                <div class="splash-text">
+                    <p>CSS Grid provides a trivial solution to a complex problem: How to display full-bleed content mixed with center-aligned width-constrained content. This solution ellimiates the need for auto-margins and floats while allowing the developer to change the grid globally and see those changes apply to each element individually.</p>
+                </div>
+            </div>
         </section>
 
-        <div class="text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+        <section class="buckets">
+            <ul>
+                <li>
+                    <img src="images/metrostation.jpg" alt="The leaves of a Nerve Plant.">
+                    <div class="bucket">
+                        <h3 class="bucket-title">Grid is great</h3>
+                        <p>CSS Grid is a two-dimensional layout tool. It is great for laying out content in a grid, and for laying out content in two dimensions.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/grenadiers.jpg" alt="A solitary tree in a field.">
+                    <div class="bucket">
+                        <h3 class="bucket-title">Flex is great too</h3>
+                        <p>That said, Grid is not always the right option for layouts. If for example you need to lay out a series of identical boxes like those you see here, Flex may be a better option.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/dubbeldekker.jpg" alt="The leaf of a tropical plant.">
+                    <div class="bucket">
+                        <h3 class="bucket-title">Know what tool to use</h3>
+                        <p>In some cases Grid and Flex are interchangeable. In other cases one is definitely better than the other. The choice usually comes down to whether you are laying out a list of items (Flex) or creating a more nuanced layout (Grid).</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-        <figure class="card">
-            <img src="images/metrostation.jpg" alt="Foto van een metrostation in London">
-            <figcaption class="caption">
-                <h3 class="caption-title">Foto van een metrostation in London</h3>
-            </figcaption>
-        </figure>
+        <section class="more">
+            <div class="more-content">
+                <h2 class="content-title">Subgrid would be nice here</h2>
+                <p>The solution provided here is limited by the lack of support for subgrids. If subgrids were available, the solution would be more refined. In lieu of subgrid, the solution applies a grid to each full-bleed section within the layout using a common class <code>.grid</code> and creates the full-bleed/centered effect that way.<p>
+            </div>
+        </section>
 
-        <figure class="card">
-            <img src="images/grenadiers.jpg" alt="Foto van grenadiers bij het Buckingham Palace door het publiek">
-            <figcaption class="caption">
-                <h3 class="caption-title">Foto van grenadiers bij het Buckingham Palace door het publiek</h3>
-            </figcaption>
-        </figure>
-    
+        <section class="twins">
+            <div class="twin">
+                <h2 class="content-title">Grid lets you do unusual things</h2>
+                <p>Creating this layout, where two items share the total available viewport width evenly alongside full-width and centered content, is suprisingly complex if you don't have CSS Grid available.</p>
+            </div>
+            <div class="twin">
+                <h2 class="content-title">Grid requires a rethink</h2>
+                <p>Seeing this layout you may still think it's better to just use old methods with auto-margins and max-widths. And you <em>can</em>, but looking at the CSS you'll see the Grid approach is both cleaner and easier to understand.</p>
+            </div>
+        </section>
     </main>
 
-
-    <footer class="info">
-        <p>Alle foto's gemaakt door <a href="https://www.instagram.com/3hos15/">Choice</a></p>
+    <footer class="colophon">
+		<aside>Alle foto's zijn gemaakt door <a href="https://www.instagram.com/3hos15" target="_blank" rel="nofollow">Choice</a></aside>
+        <!-- <aside>uhmmmmmm</aside> -->
     </footer>
+
 </body>
+
 </html>
