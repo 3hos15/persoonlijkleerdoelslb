@@ -153,6 +153,10 @@ p {
 	padding: 1em 0;
 }
 
+.container p {
+	padding: 1em 1em;
+}
+
 img {
 	display: block;
 	border: 0;
@@ -177,44 +181,44 @@ img {
 }
 
 
-.splash {
+.intro {
 	background: #FFF6E5;
 	padding-bottom: 2em;
 }
 
-.splash-content {
+.intro-content {
 	padding: 1.5em;
 }
 
 @media screen and (min-width: 600px) {
-	.splash-text {
+	.intro-text {
 		columns: 2;
 		column-gap: 2em;
 	}
 
-	.splash-text p {
+	.intro-text p {
 		padding-top: 0;
 	}
 }
 
 
-.buckets {
+.containers {
 	padding: 2em 1em 1em;
 	background: #cba577;
 }
 
-.buckets ul {
+.containers ul {
 	margin: 0;
 	padding: 0;
 }
 
-.buckets li {
+.containers li {
 	margin-bottom: 1em;
 	background: white;
 	list-style-type: none;
 }
 
-.bucket {
+.container {
 	padding: 1.5em;
 }
 
@@ -224,17 +228,17 @@ img {
 }
 
 
-.twin {
+.extra {
 	padding: 2em;
 	background: #896943;
 	color: white;
 }
 
-.twin:last-of-type {
+.extra:last-of-type {
 	background: #e3bf93;
 }
 
-.colophon {
+footer {
 	padding: 1em;
 	background: hsl(341, 19%, 45%);
 	color: white;
@@ -242,12 +246,12 @@ img {
 	text-align: center;
 }
 
-.colophon a {
+footer a {
 	color: white;
 }
 
-.colophon a:hover,
-.colophon a:focus {
+footer a:hover,
+footer a:focus {
 	border-bottom: 1px solid rgb(254, 62, 206);
 }
 
@@ -256,12 +260,12 @@ img {
 @media screen and (min-width: 700px) {
 	@supports (display: flex) {
 
-		.buckets ul {
+		.containers ul {
 			display: flex;
 			justify-content: space-around;
 		}
 
-		.buckets li {
+		.containers li {
 			width: 31%;
 		}
 
@@ -282,22 +286,22 @@ img {
 	}
 
 	.main-area > *,
-	.colophon {
+	footer {
 		display: grid;
 		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
 	}
 
-	.splash-content,
+	.intro-content,
 	.more-content,
-	.buckets ul {
+	.containers ul {
 		grid-column: 2/4;
 	}
 
-	.twin {
+	.extra {
 		grid-column: span 2;
 	}
 
-    .colophon aside {
+    footer aside {
         grid-column: span 3;
     }
 
