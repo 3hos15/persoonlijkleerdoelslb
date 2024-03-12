@@ -152,6 +152,7 @@ h3 {
 p {
 	margin: 0;
 	padding: 1em 0;
+	text-align: center;
 }
 
 .container p {
@@ -163,11 +164,6 @@ img {
 	border: 0;
 	width: 100%;
 	height: auto;
-}
-
-.containers img:hover {
-	transform: scale(1.5);
-	padding-left: 1em;
 }
 
 .logo,
@@ -254,6 +250,10 @@ footer a {
 	color: white;
 }
 
+footer aside {
+	align-items: center;
+}
+
 footer a:hover,
 footer a:focus {
 	border-bottom: 1px solid rgb(254, 62, 206);
@@ -273,6 +273,11 @@ footer a:focus {
 			width: 31%;
 		}
 
+		.containers img:hover {
+			transform: scale(2.3);
+			padding-left: 1em;
+		}
+		
 	}
 }
 
@@ -306,7 +311,7 @@ footer a:focus {
 	}
 
     footer aside {
-        grid-column: span 3;
+        grid-column: span 4;
     }
 
 }
