@@ -1,0 +1,96 @@
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+body {
+	margin: 0;
+    padding: 0;
+    background-color: rgb(222, 210, 189);
+}
+
+
+h1 {
+    font-family: "Playfair Display";
+    color: rgb(222, 210, 189);
+    background-color: black;
+    font-size: 1.5em;
+
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+    display: block;
+	border: 0;
+    width: 50%;
+}
+
+.caption {
+	padding: 1em;
+	background: hsla(246, 40%, 30%, .6);
+	color: white;
+	font-size: 1.2em;
+	transition: all .4s;
+}
+
+a:focus .caption,
+a:hover .caption {
+	background: hsla(246, 40%, 30%, 1);
+}
+
+.caption-title {
+	margin: 0;
+	font-size: 1.4em;
+	line-height: 1.1em;
+}
+
+.navi {
+
+    background-color: blueviolet;
+}
+
+
+
+
+
+
+@supports (grid-area: auto) {
+
+    @media screen and (min-width: 0px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+
+    @media screen and (min-width: 600px) {
+        .site {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+=        }
+
+        .navi {
+            grid-row: 2/4;
+            grid-column: 1/4;
+        }
+        
+        .content {
+            grid
+
+        }
+        .info {
+            grid-row: 4;
+        }
+    }
+} 
