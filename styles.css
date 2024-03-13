@@ -1,35 +1,3 @@
-/*--------------------------------------------------------------
-Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
-
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
-}
 
 /*--------------------------------------------------------------
 Typography
@@ -50,113 +18,34 @@ textarea {
 	line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
+h1 {
+	font-size: 2.3em;
+	padding-top: 2.2em;
+	font-family: "Alice", serif;
+	font-weight: bolder;
 }
+	
 
-p {
-	margin-bottom: 1.5em;
-}
-
-/* b,
-strong {
-	font-weight: bold;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-} */
-
-/* blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-    display: inline-block;
-    font-family: "Courier 10 Pitch", Courier, monospace;
-    color: #ddca7e;
-    background: #282c34;
-	padding: .5em .8em;
-    border-radius: .2em;
-}
-
-code,
-kbd,
-tt,
-var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
-sup,
-sub {
-	font-size: 75%;
-	height: 0;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	bottom: 1ex;
-}
-
-sub {
-	top: .5ex;
-}
-
-small {
-	font-size: 75%;
-}
-
-big {
-	font-size: 125%;
-} */
-
-
-/*--------------------------------------------------------------
-General styling
---------------------------------------------------------------*/
-
-h1,
 h2,
 h3 {
 	text-align: center;
 	margin: 0;
 	padding: 1em 0;
-}
+	font-family: "Alice", serif;}
 
 p {
 	margin: 0;
 	padding: 1em 0;
 	text-align: center;
+	font-family: "Commissioner", sans-serif;
 }
 
 .container p {
 	padding: 1em 1em;
+}
+
+header a {
+	font-family: "Special Elite", system-ui;
 }
 
 img {
@@ -259,35 +148,11 @@ footer a {
 	color: white;
 }
 
-footer aside {
+footer p {
 	align-items: center;
 }
 
-footer a:hover,
-footer a:focus {
-	border-bottom: 1px solid rgb(254, 62, 206);
-}
 
-@media (max-width: 700px) {
-	header div {
-		flex-direction: column;
-	}
-
-	header div img {
-		width: 100%;
-	}
-
-	.gallery img {
-		max-height: 300px; /* Control size by setting a max-height */
-
-	}
-
-	.reflectie {
-		display: grid;
-		grid-row: 1fr 1fr;
-	}
-
-}
 
 
 @media screen and (min-width: 700px) {
@@ -338,8 +203,9 @@ footer a:focus {
 		grid-column: span 2;
 	}
 
-    footer aside {
+    footer p {
         grid-column: span 4;
+		padding: 0;
     }
 
 }
@@ -359,20 +225,93 @@ footer a:focus {
     width: auto; 
 }
 
-.reflectie {
+.reflectie, .feedback {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	background-color: #21759b;
+	grid-template-columns: repeat(2, 1fr);
 }
 
-.reflectie p {
+.reflectie p, .feedback p {
 	padding: 1em;
 }
 
 .reflectie p:first-child {
-	background-color: #f3d4ad;
+	background-color: rgb(228, 195, 155);
 }
 
 .reflectie p:last-child {
 	background-color: rgb(240, 199, 184);
 }
+
+footer a:hover {
+	color: rgb(238, 186, 149);
+}
+
+main a {
+	color: black;
+}
+
+main a:hover {
+	color: rgb(223, 57, 93);
+}
+
+.feedback p:first-child {
+	background-color: rgb(197, 145, 126);
+	
+}
+
+.feedback p:last-child {
+	background-color: rgb(228, 175, 159);
+}
+
+nav {
+	display: flex;
+	justify-content: center; /* Center items horizontally */
+  }
+  
+nav ul {
+list-style-type: none;
+padding: 0;
+display: flex;
+}
+
+nav ul li {
+margin-right: 20px;
+}
+
+nav ul li:last-child {
+margin-right: 0;
+}
+
+nav ul li a {
+font-size: 1.5em;
+text-decoration: none;
+color: black;
+}
+
+nav ul li a:hover {
+	color: rgb(88, 25, 25);
+}
+
+@media (max-width: 700px) {
+	header div {
+		flex-direction: column;
+	}
+
+	header div img {
+		width: 100%;
+	}
+
+	.gallery img {
+		max-height: 300px; /* Control size by setting a max-height */
+
+	}
+
+	.reflectie, 
+	.feedback {
+		grid-template-columns: 1fr;
+	}
+
+
+}
+
+  
