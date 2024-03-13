@@ -166,6 +166,15 @@ img {
 	height: auto;
 }
 
+header img {
+	width: 50%;
+}
+header div {
+	display: flex;
+
+}
+
+
 .logo,
 .site-title {
 	text-align: center;
@@ -259,6 +268,21 @@ footer a:focus {
 	border-bottom: 1px solid rgb(254, 62, 206);
 }
 
+@media (max-width: 700px) {
+	header div {
+		flex-direction: column;
+	}
+
+	header div img {
+		width: 100%;
+	}
+
+	.gallery img {
+		max-height: 300px; /* Control size by setting a max-height */
+
+	}
+}
+
 
 
 @media screen and (min-width: 700px) {
@@ -317,17 +341,54 @@ footer a:focus {
 }
 
 
-
 .gallery {
-	display: flex;
-	overflow: auto;
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap;
+    padding: 10px;
+    background-color: #9d815e;
+}
+
+.gallery img {
+    margin: 0.5em;
+    display: block;
+    max-height: 450px; /* Control size by setting a max-height */
+    width: auto; /* Keep the aspect ratio */
+}
+
+
+
+/* .gallery {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #9d815e;
+}
+
+.gallery img {
+    flex: 0 0 auto;
+    margin: 0.5em;
+    display: block;
+    max-width: none;
+} */
+
+
+
+/* .gallery {
+	display: flex;
+	overflow: none;
+    white-space: nowrap;
+	padding: 10px;
 	background-color: #9d815e;
 }
+
+
+
 
 .gallery img {
 	margin: 0.5em;
 	display: block;
-	width: 40%;
+	width:100%;
 }
-
+ */
