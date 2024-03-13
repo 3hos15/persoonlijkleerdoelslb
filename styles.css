@@ -281,8 +281,13 @@ footer a:focus {
 		max-height: 300px; /* Control size by setting a max-height */
 
 	}
-}
 
+	.reflectie {
+		display: grid;
+		grid-row: 1fr 1fr;
+	}
+
+}
 
 
 @media screen and (min-width: 700px) {
@@ -299,7 +304,6 @@ footer a:focus {
 
 		.containers img:hover {
 			transform: scale(2.3);
-			padding-left: 1em;
 		}
 		
 	}
@@ -343,52 +347,32 @@ footer a:focus {
 
 .gallery {
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    white-space: nowrap;
-    padding: 10px;
-    background-color: #9d815e;
-}
-
-.gallery img {
-    margin: 0.5em;
-    display: block;
-    max-height: 450px; /* Control size by setting a max-height */
-    width: auto; /* Keep the aspect ratio */
-}
-
-
-
-/* .gallery {
-    display: flex;
     overflow-x: auto;
-    white-space: nowrap;
     padding: 10px;
     background-color: #9d815e;
 }
 
 .gallery img {
-    flex: 0 0 auto;
     margin: 0.5em;
     display: block;
-    max-width: none;
-} */
-
-
-
-/* .gallery {
-	display: flex;
-	overflow: none;
-    white-space: nowrap;
-	padding: 10px;
-	background-color: #9d815e;
+    max-height: 450px; 
+    width: auto; 
 }
 
-
-
-
-.gallery img {
-	margin: 0.5em;
-	display: block;
-	width:100%;
+.reflectie {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #21759b;
 }
- */
+
+.reflectie p {
+	padding: 1em;
+}
+
+.reflectie p:first-child {
+	background-color: #f3d4ad;
+}
+
+.reflectie p:last-child {
+	background-color: rgb(240, 199, 184);
+}
